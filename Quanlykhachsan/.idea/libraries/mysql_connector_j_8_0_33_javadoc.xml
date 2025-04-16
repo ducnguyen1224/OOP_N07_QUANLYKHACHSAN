@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="mysql-connector-j-8.0.33-javadoc">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/uiDesigner-251.23774.318/uiDesigner/lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Downloads/mysql-connector-j-8.0.33-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Downloads/uiDesigner-251.23774.318/uiDesigner/lib" recursive="false" />
+  </library>
+</component>

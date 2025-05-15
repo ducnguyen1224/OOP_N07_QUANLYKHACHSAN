@@ -38,6 +38,7 @@ public class Room extends javax.swing.JFrame {
         jToggleButton9 = new javax.swing.JToggleButton();
         jToggleButton10 = new javax.swing.JToggleButton();
         jToggleButton11 = new javax.swing.JToggleButton();
+        jToggleButton12 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
@@ -59,6 +60,23 @@ public class Room extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        jFormattedTextField6 = new javax.swing.JFormattedTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jFormattedTextField7 = new javax.swing.JFormattedTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jFormattedTextField8 = new javax.swing.JFormattedTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jFormattedTextField9 = new javax.swing.JFormattedTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jFormattedTextField10 = new javax.swing.JFormattedTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jFormattedTextField11 = new javax.swing.JFormattedTextField();
 
         jPanel3.setBackground(new java.awt.Color(255, 51, 51));
         jPanel3.setForeground(new java.awt.Color(255, 51, 51));
@@ -125,6 +143,11 @@ public class Room extends javax.swing.JFrame {
 
         jToggleButton6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton6.setText("Quản lý dịch vụ");
+        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton6ActionPerformed(evt);
+            }
+        });
 
         jToggleButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton7.setText("Quản lý khuyến mại");
@@ -136,15 +159,43 @@ public class Room extends javax.swing.JFrame {
 
         jToggleButton8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton8.setText("Hóa đơn khách hàng");
+        jToggleButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton8ActionPerformed(evt);
+            }
+        });
 
         jToggleButton9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton9.setText("Doanh Thu ");
+        jToggleButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton9ActionPerformed(evt);
+            }
+        });
 
         jToggleButton10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton10.setText("Quản lý phòng");
+        jToggleButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton10ActionPerformed(evt);
+            }
+        });
 
         jToggleButton11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton11.setText("Quản lý thuê phòng");
+        jToggleButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton11ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton12.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jToggleButton12.setText("Đăng Xuất");
+        jToggleButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -163,6 +214,7 @@ public class Room extends javax.swing.JFrame {
             .addComponent(jToggleButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jToggleButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jToggleButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToggleButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,7 +241,9 @@ public class Room extends javax.swing.JFrame {
                 .addComponent(jToggleButton8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton9)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTable1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -269,7 +323,7 @@ public class Room extends javax.swing.JFrame {
         });
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Vip", "Matter" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Vip", "Master" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -315,7 +369,12 @@ public class Room extends javax.swing.JFrame {
         jLabel10.setText("Giới tính");
 
         jComboBox3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam ", "Nữ" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jButton1.setText("Booking");
@@ -325,19 +384,173 @@ public class Room extends javax.swing.JFrame {
             }
         });
 
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel11.setText("Số phòng");
+
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel12.setText("Loại phòng");
+
+        jComboBox5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Vip", "Master" }));
+        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox5ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel13.setText("Số giường");
+
+        jFormattedTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField6ActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel14.setText("Số khách");
+
+        jFormattedTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField7ActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel15.setText("Vị trí");
+
+        jFormattedTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField8ActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel18.setText("Mô tả phòng");
+
+        jFormattedTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField9ActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel19.setText("Giá");
+
+        jFormattedTextField10.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,###.00"))));
+        jFormattedTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField10ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jButton2.setText("Tạo phòng");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jButton3.setText("Chỉnh sửa ");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jFormattedTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField11ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField6)
+                    .addComponent(jFormattedTextField8)
+                    .addComponent(jFormattedTextField10))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jFormattedTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField9)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jFormattedTextField11)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jFormattedTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15)
+                        .addComponent(jFormattedTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jFormattedTextField9)
+                        .addComponent(jLabel18)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFormattedTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addGap(18, 18, 18))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(208, 208, 208))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -361,15 +574,12 @@ public class Room extends javax.swing.JFrame {
                                     .addComponent(jFormattedTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                                     .addComponent(jFormattedTextField3)
                                     .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap(19, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(208, 208, 208))))
+                        .addContainerGap(19, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -402,10 +612,10 @@ public class Room extends javax.swing.JFrame {
                     .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -416,14 +626,15 @@ public class Room extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
-        // TODO add your handling code here:
+        new Promotion(accountId).setVisible(true); 
+        this.dispose();
     }//GEN-LAST:event_jToggleButton7ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
@@ -465,6 +676,11 @@ public class Room extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField5ActionPerformed
 
+    private String mapGender(String input) {
+        if (input.equalsIgnoreCase("Nam")) return "MALE";
+        if (input.equalsIgnoreCase("Nữ")) return "FEMALE";
+        return "OTHER";
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         try {
@@ -478,7 +694,6 @@ public class Room extends javax.swing.JFrame {
                 return;
             }
 
-            // Xử lý ngày bắt đầu
             String startDateInput = jFormattedTextField1.getText().trim();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
             java.util.Date parsedStartDate = sdf.parse(startDateInput);
@@ -495,9 +710,176 @@ public class Room extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Lỗi khi xử lý đặt phòng: " + e.getMessage());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jToggleButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton10ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+        
+    }//GEN-LAST:event_jComboBox5ActionPerformed
+
+    private void jFormattedTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField6ActionPerformed
+
+    private void jFormattedTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField7ActionPerformed
+
+    private void jFormattedTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField8ActionPerformed
+
+    private void jFormattedTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField9ActionPerformed
+
+    private void jFormattedTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField10ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try {
+            String roomNumber = jFormattedTextField11.getText();
+            String category = (String) jComboBox1.getSelectedItem();
+            String bedsStr = jFormattedTextField6.getText();
+            String maxGuestsStr = jFormattedTextField7.getText();
+            String location = jFormattedTextField8.getText(); 
+            String description = jFormattedTextField9.getText(); 
+            String priceStr = jFormattedTextField10.getText().replace(",", "").trim();
+
+            if (roomNumber == null || category == null || bedsStr == null || maxGuestsStr == null || location == null || description == null || priceStr == null) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin.");
+                return;
+            }
+
+            int beds = Integer.parseInt(bedsStr);
+            int maxGuests = Integer.parseInt(maxGuestsStr);
+            double price = Double.parseDouble(priceStr);
+
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "9823");
+            String sql = "INSERT INTO Room (room_number, room_category, beds, max_guests, location, description, custom_price) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, roomNumber);
+            stmt.setString(2, category);
+            stmt.setInt(3, beds);
+            stmt.setInt(4, maxGuests);
+            stmt.setString(5, location);
+            stmt.setString(6, description);
+            stmt.setDouble(7, price);
+
+            int rows = stmt.executeUpdate();
+            if (rows > 0) {
+                JOptionPane.showMessageDialog(this, "Tạo phòng thành công!");
+                clearRoomInputFields1();
+                loadRoomData(); 
+            } else {
+                JOptionPane.showMessageDialog(this, "Tạo phòng thất bại!");
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Lỗi khi tạo phòng: " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void clearRoomInputFields1() {
+        jFormattedTextField11.setText("");  // Số phòng
+        jComboBox5.setSelectedIndex(0);     // Loại phòng
+        jFormattedTextField6.setText("");   // Số giường
+        jFormattedTextField7.setText("");   // Số khách tối đa
+        jFormattedTextField8.setText("");   // Vị trí
+        jFormattedTextField9.setText("");   // Mô tả
+        jFormattedTextField10.setText("");  // Giá
+    }
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        int selectedRow = jTable1.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn phòng cần sửa.");
+            return;
+        }
+
+        String roomNumber = (String) jTable1.getValueAt(selectedRow, 1);
+        String category = JOptionPane.showInputDialog(this, "Loại phòng mới:", jTable1.getValueAt(selectedRow, 2));
+        String bedsStr = JOptionPane.showInputDialog(this, "Số giường mới:", jTable1.getValueAt(selectedRow, 3));
+        String maxGuestsStr = JOptionPane.showInputDialog(this, "Số khách tối đa:", jTable1.getValueAt(selectedRow, 4));
+        String location = JOptionPane.showInputDialog(this, "Vị trí mới:", jTable1.getValueAt(selectedRow, 5));
+        String description = JOptionPane.showInputDialog(this, "Mô tả mới:", jTable1.getValueAt(selectedRow, 6));
+        String priceStr = JOptionPane.showInputDialog(this, "Giá mới:", jTable1.getValueAt(selectedRow, 7));
+
+        if (category == null || bedsStr == null || maxGuestsStr == null || location == null || description == null || priceStr == null)
+            return;
+
+        try {
+            int beds = Integer.parseInt(bedsStr);
+            int maxGuests = Integer.parseInt(maxGuestsStr);
+            double price = Double.parseDouble(priceStr);
+
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "9823");
+            String sql = "UPDATE Room SET room_category = ?, beds = ?, max_guests = ?, location = ?, description = ?, custom_price = ? WHERE room_number = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, category);
+            stmt.setInt(2, beds);
+            stmt.setInt(3, maxGuests);
+            stmt.setString(4, location);
+            stmt.setString(5, description);
+            stmt.setDouble(6, price);
+            stmt.setString(7, roomNumber);
+
+            int rows = stmt.executeUpdate();
+            if (rows > 0) {
+                JOptionPane.showMessageDialog(this, "Cập nhật phòng thành công!");
+                loadRoomData();
+            } else {
+                JOptionPane.showMessageDialog(this, "Cập nhật thất bại!");
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Lỗi khi cập nhật phòng: " + ex.getMessage());
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jFormattedTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField11ActionPerformed
+
+    private void jToggleButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton11ActionPerformed
+        new Booking(accountId).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton11ActionPerformed
+
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        new Service(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
+        new Invoice(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton8ActionPerformed
+
+    private void jToggleButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton9ActionPerformed
+        new DoanhThu(accountId).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton9ActionPerformed
+
+    private void jToggleButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton12ActionPerformed
+        Signin signinForm = new Signin();
+        signinForm.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jToggleButton12ActionPerformed
     private void insertCustomerAndBooking(String name, String email, String phone, Date startDate, Date endDate) {
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang")) {
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823")) {
 
             conn.setAutoCommit(false); // Bắt đầu transaction
 
@@ -513,13 +895,18 @@ public class Room extends javax.swing.JFrame {
             if (rs.next()) {
                 customerId = rs.getInt("customer_id");
             } else {
-                // 2. Thêm khách hàng mới
-                String insertCustomerSQL = "INSERT INTO Customer (full_name, email, phone) VALUES (?, ?, ?)";
+                // Lấy giới tính từ combo box và chuyển về ENUM
+                String rawGender = (String) jComboBox3.getSelectedItem();
+                String gender = mapGender(rawGender); // "Nam" → "MALE", "Nữ" → "FEMALE"
+
+                String insertCustomerSQL = "INSERT INTO Customer (full_name, email, phone, gender) VALUES (?, ?, ?, ?)";
                 PreparedStatement insertStmt = conn.prepareStatement(insertCustomerSQL, Statement.RETURN_GENERATED_KEYS);
                 insertStmt.setString(1, name);
                 insertStmt.setString(2, email);
                 insertStmt.setString(3, phone);
-                insertStmt.executeUpdate();
+                insertStmt.setString(4, gender); 
+
+                insertStmt.executeUpdate(); 
 
                 ResultSet generatedKeys = insertStmt.getGeneratedKeys();
                 if (generatedKeys.next()) {
@@ -531,7 +918,6 @@ public class Room extends javax.swing.JFrame {
                 }
             }
 
-            // 3. Lấy room_id từ room_number được chọn
             String roomNumber = (String) jComboBox2.getSelectedItem();
             if (roomNumber == null || roomNumber.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Vui lòng chọn phòng.");
@@ -561,13 +947,15 @@ public class Room extends javax.swing.JFrame {
             bookingStmt.setDate(4, endDate);
             bookingStmt.executeUpdate();
 
-            conn.commit(); // Ghi nhận transaction
+            conn.commit();
             JOptionPane.showMessageDialog(this, "Đặt phòng thành công!");
+            clearInputFields();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Lỗi khi đặt phòng: " + e.getMessage());
         }
     }
+
 
     private void loadAvailableRoomsToComboBox2() {
         try {
@@ -575,7 +963,7 @@ public class Room extends javax.swing.JFrame {
             if (selectedCategory == null) return;
 
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang"
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823"
             );
 
             String sql = """
@@ -609,7 +997,7 @@ public class Room extends javax.swing.JFrame {
     private void loadRoomData() {
         try {
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang"
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823"
             );
 
             String sql = """
@@ -668,7 +1056,17 @@ public class Room extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Lỗi khi tải dữ liệu phòng: " + e.getMessage());
         }
     }
-
+    
+    private void clearInputFields() {
+        jFormattedTextField1.setText("");
+        jFormattedTextField2.setText("");
+        jFormattedTextField3.setText("");
+        jFormattedTextField4.setText("");
+        jFormattedTextField5.setText("");
+        jComboBox1.setSelectedIndex(0);
+        jComboBox2.setSelectedIndex(-1);
+        jComboBox3.setSelectedIndex(0);
+    }
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
@@ -679,18 +1077,34 @@ public class Room extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField10;
+    private javax.swing.JFormattedTextField jFormattedTextField11;
     private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JFormattedTextField jFormattedTextField3;
     private javax.swing.JFormattedTextField jFormattedTextField4;
     private javax.swing.JFormattedTextField jFormattedTextField5;
+    private javax.swing.JFormattedTextField jFormattedTextField6;
+    private javax.swing.JFormattedTextField jFormattedTextField7;
+    private javax.swing.JFormattedTextField jFormattedTextField8;
+    private javax.swing.JFormattedTextField jFormattedTextField9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -703,10 +1117,12 @@ public class Room extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
+    private javax.swing.JToggleButton jToggleButton12;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JToggleButton jToggleButton5;

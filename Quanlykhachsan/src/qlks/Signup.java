@@ -336,7 +336,6 @@ public class Signup extends javax.swing.JFrame {
         String phone = jFormattedTextField2.getText().trim();
         String username = jFormattedTextField1.getText().trim();
         String password = new String(jPasswordField1.getPassword()).trim();
-
         // Xử lý ngày sinh
         java.sql.Date sqlDateOfBirth;
         try {
@@ -350,15 +349,12 @@ public class Signup extends javax.swing.JFrame {
             return;
         }
 
-        // Xử lý giới tính
         String gender = "";
         if (jCheckBox1.isSelected()) {
             gender = "MALE";
         } else if (jCheckBox2.isSelected()) {
             gender = "FEMALE";
         }
-
-        // Kiểm tra đầu vào rỗng
         if (fullname.isEmpty() || email.isEmpty() || phone.isEmpty() ||
             username.isEmpty() || password.isEmpty() || gender.isEmpty()) {
             jLabel1.setForeground(Color.RED);
@@ -367,9 +363,7 @@ public class Signup extends javax.swing.JFrame {
         }
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang");
-
-            // Kiểm tra username đã tồn tại
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "9823");
             String checkUserSQL = "SELECT * FROM Account WHERE username = ?";
             PreparedStatement checkStmt = conn.prepareStatement(checkUserSQL);
             checkStmt.setString(1, username);

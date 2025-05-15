@@ -40,6 +40,7 @@ public class Customer extends javax.swing.JFrame {
         jToggleButton9 = new javax.swing.JToggleButton();
         jToggleButton10 = new javax.swing.JToggleButton();
         jToggleButton11 = new javax.swing.JToggleButton();
+        jToggleButton12 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
@@ -112,6 +113,11 @@ public class Customer extends javax.swing.JFrame {
 
         jToggleButton6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton6.setText("Quản lý dịch vụ");
+        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton6ActionPerformed(evt);
+            }
+        });
 
         jToggleButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton7.setText("Quản lý khuyến mại");
@@ -123,9 +129,19 @@ public class Customer extends javax.swing.JFrame {
 
         jToggleButton8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton8.setText("Hóa đơn khách hàng");
+        jToggleButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton8ActionPerformed(evt);
+            }
+        });
 
         jToggleButton9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton9.setText("Doanh Thu ");
+        jToggleButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton9ActionPerformed(evt);
+            }
+        });
 
         jToggleButton10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton10.setText("Quản lý phòng");
@@ -137,6 +153,19 @@ public class Customer extends javax.swing.JFrame {
 
         jToggleButton11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton11.setText("Quản lý thuê phòng");
+        jToggleButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton11ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton12.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jToggleButton12.setText("Đăng Xuất");
+        jToggleButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -155,6 +184,7 @@ public class Customer extends javax.swing.JFrame {
             .addComponent(jToggleButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jToggleButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jToggleButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToggleButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,34 +211,36 @@ public class Customer extends javax.swing.JFrame {
                 .addComponent(jToggleButton8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton9)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton12)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         jTable1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "STT", "Họ và tên", "Email", "Số điện thoại", "Gender", "Ngày sinh", "Tài khoản", "Mật khẩu"
+                "STT", "Họ và tên", "Email", "Số điện thoại", "Gender", "Ngày sinh", "Có Tài khoản"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -297,7 +329,8 @@ public class Customer extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
-        // TODO add your handling code here:
+        new Promotion(accountId).setVisible(true); 
+        this.dispose();
     }//GEN-LAST:event_jToggleButton7ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
@@ -318,19 +351,47 @@ public class Customer extends javax.swing.JFrame {
         new Room(accountId).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jToggleButton10ActionPerformed
+
+    private void jToggleButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton11ActionPerformed
+        new Booking(accountId).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton11ActionPerformed
+
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        new Service(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
+        new Invoice(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton8ActionPerformed
+
+    private void jToggleButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton9ActionPerformed
+        new DoanhThu(accountId).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton9ActionPerformed
+
+    private void jToggleButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton12ActionPerformed
+        Signin signinForm = new Signin();
+        signinForm.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jToggleButton12ActionPerformed
+    
     private void loadCustomerData() {
         try {
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang"
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823"
             );
             String sql = "SELECT c.customer_id, c.full_name, c.email, c.phone, c.gender, c.date_of_birth, "
-                       + "a.username, a.password FROM Customer c "
-                       + "JOIN Account a ON c.account_id = a.account_id";
+                       + "CASE WHEN c.account_id IS NOT NULL THEN 'Có' ELSE 'Không' END AS status_account "
+                       + "FROM Customer c";
+
             PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            model.setRowCount(0); 
+            model.setRowCount(0);
 
             int stt = 1;
             while (rs.next()) {
@@ -341,8 +402,7 @@ public class Customer extends javax.swing.JFrame {
                     rs.getString("phone"),
                     rs.getString("gender"),
                     rs.getDate("date_of_birth"),
-                    rs.getString("username"),
-                    rs.getString("password")
+                    rs.getString("status_account"),
                 };
                 model.addRow(row);
             }
@@ -351,7 +411,6 @@ public class Customer extends javax.swing.JFrame {
             stmt.close();
             conn.close();
 
-            // Tùy chọn: chỉnh độ rộng các cột nếu cần
             jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(40);   // STT
             jTable1.getColumnModel().getColumn(1).setPreferredWidth(150);  // Họ và tên
@@ -359,20 +418,20 @@ public class Customer extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(3).setPreferredWidth(120);  // Phone
             jTable1.getColumnModel().getColumn(4).setPreferredWidth(80);   // Gender
             jTable1.getColumnModel().getColumn(5).setPreferredWidth(100);  // DOB
-            jTable1.getColumnModel().getColumn(6).setPreferredWidth(120);  // Tài khoản
-            jTable1.getColumnModel().getColumn(7).setPreferredWidth(120);  // Mật khẩu
+            jTable1.getColumnModel().getColumn(6).setPreferredWidth(70);   // Trạng Thái Tài khoản
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Lỗi khi tải dữ liệu khách hàng: " + e.getMessage());
         }
     }
 
+
     private void searchCustomer() {
         String keyword = jFormattedTextField1.getText().trim();
 
         try {
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang"
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823"
             );
             String sql = "SELECT c.customer_id, c.full_name, c.email, c.phone, c.gender, c.date_of_birth, "
                        + "a.username, a.password FROM Customer c "
@@ -431,6 +490,7 @@ public class Customer extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
+    private javax.swing.JToggleButton jToggleButton12;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JToggleButton jToggleButton5;

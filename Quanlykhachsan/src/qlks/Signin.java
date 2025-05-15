@@ -238,7 +238,7 @@ public class Signin extends javax.swing.JFrame {
         }
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "9823");
             String sql = "SELECT account_id, role FROM Account WHERE username = ? AND password = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, username);
@@ -270,7 +270,22 @@ public class Signin extends javax.swing.JFrame {
                 } else {
                     // CUSTOMER hoặc người dùng khác
                     jLabel1.setForeground(new Color(0, 102, 0));
-                    jLabel1.setText("Login successful, but not admin.");
+                    String empSql = "SELECT full_name FROM Customer WHERE account_id = ?";
+                    PreparedStatement empStmt = conn.prepareStatement(empSql);
+                    empStmt.setInt(1, accountId);
+                    ResultSet empRs = empStmt.executeQuery();
+
+                    String fullName = "Customer"; 
+                    if (empRs.next()) {
+                        fullName = empRs.getString("full_name");
+                    }
+
+                    empRs.close();
+                    empStmt.close();
+
+                    Customer_Information CustomerForm = new Customer_Information(accountId);
+                    CustomerForm.setVisible(true);
+                    this.dispose();
                 }
             } else {
                 jLabel1.setForeground(Color.RED);

@@ -43,6 +43,7 @@ public class Employee extends javax.swing.JFrame {
         jToggleButton9 = new javax.swing.JToggleButton();
         jToggleButton10 = new javax.swing.JToggleButton();
         jToggleButton11 = new javax.swing.JToggleButton();
+        jToggleButton13 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
@@ -131,6 +132,11 @@ public class Employee extends javax.swing.JFrame {
 
         jToggleButton6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton6.setText("Quản lý dịch vụ");
+        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton6ActionPerformed(evt);
+            }
+        });
 
         jToggleButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton7.setText("Quản lý khuyến mại");
@@ -142,9 +148,19 @@ public class Employee extends javax.swing.JFrame {
 
         jToggleButton8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton8.setText("Hóa đơn khách hàng");
+        jToggleButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton8ActionPerformed(evt);
+            }
+        });
 
         jToggleButton9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton9.setText("Doanh Thu ");
+        jToggleButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton9ActionPerformed(evt);
+            }
+        });
 
         jToggleButton10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton10.setText("Quản lý phòng");
@@ -156,6 +172,19 @@ public class Employee extends javax.swing.JFrame {
 
         jToggleButton11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jToggleButton11.setText("Quản lý thuê phòng");
+        jToggleButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton11ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton13.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jToggleButton13.setText("Đăng Xuất");
+        jToggleButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton13ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -174,6 +203,7 @@ public class Employee extends javax.swing.JFrame {
             .addComponent(jToggleButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jToggleButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jToggleButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToggleButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,7 +230,9 @@ public class Employee extends javax.swing.JFrame {
                 .addComponent(jToggleButton8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton9)
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTable1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -413,7 +445,7 @@ public class Employee extends javax.swing.JFrame {
                         .addComponent(jToggleButton2)
                         .addComponent(jToggleButton12)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -437,7 +469,7 @@ public class Employee extends javax.swing.JFrame {
     private void loadEmployeeData() {
         try {
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang"
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823"
             );
             String sql = "SELECT employee_id, full_name, email, phone, position, hire_date,salary FROM Employee";
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -485,7 +517,7 @@ public class Employee extends javax.swing.JFrame {
 
         try {
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang"
+                "jdbc:mysql://localhost:3306/qlks1", "root", "9823"
             );
             String sql = "SELECT employee_id, full_name, email, phone, position, hire_date, salary "
                        + "FROM Employee WHERE full_name LIKE ?";
@@ -530,7 +562,8 @@ public class Employee extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
-        // TODO add your handling code here:
+        new Promotion(accountId).setVisible(true); 
+        this.dispose();
     }//GEN-LAST:event_jToggleButton7ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
@@ -561,7 +594,7 @@ public class Employee extends javax.swing.JFrame {
         }
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "9823");
             String sql = "DELETE FROM Employee WHERE email = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, email);
@@ -598,7 +631,7 @@ public class Employee extends javax.swing.JFrame {
             java.sql.Date sqlHireDate = new java.sql.Date(new java.text.SimpleDateFormat("dd/MM/yyyy").parse(hireDate).getTime());
             double salary = Double.parseDouble(salaryText);
 
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "phamngocdang");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlks1", "root", "9823");
             String sql = "INSERT INTO Employee (full_name, email, phone, position, hire_date, salary) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, fullName);
@@ -629,6 +662,32 @@ public class Employee extends javax.swing.JFrame {
         new Room(accountId).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jToggleButton10ActionPerformed
+
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        new Service(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jToggleButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton11ActionPerformed
+        new Booking(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton11ActionPerformed
+
+    private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
+        new Invoice(accountId).setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton8ActionPerformed
+
+    private void jToggleButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton9ActionPerformed
+        new DoanhThu(accountId).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jToggleButton9ActionPerformed
+
+    private void jToggleButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton13ActionPerformed
+        Signin signinForm = new Signin();
+        signinForm.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jToggleButton13ActionPerformed
     private void clearInputFields() {
         jFormattedTextField2.setText("");
         jFormattedTextField3.setText("");
@@ -679,6 +738,7 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
     private javax.swing.JToggleButton jToggleButton12;
+    private javax.swing.JToggleButton jToggleButton13;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;

@@ -21,7 +21,7 @@ import java.awt.BorderLayout;
 
 /**
  *
- * @author I_m Fall
+ * @author HP
  */
 public class DoanhThu extends javax.swing.JFrame {
     private int accountId;

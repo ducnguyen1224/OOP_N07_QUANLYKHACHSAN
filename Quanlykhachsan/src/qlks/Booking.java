@@ -8,7 +8,10 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
-
+/**
+ *
+ * @author nguyenhoang
+ */
 
 
 public class Booking extends javax.swing.JFrame {

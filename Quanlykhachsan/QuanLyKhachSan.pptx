@@ -1,0 +1,38 @@
+# Quản Lý Khách Sạn
+## Nhóm: [Tên nhóm]
+
+### Slide 1: Giới thiệu
+- Đề tài: Xây dựng hệ thống quản lý khách sạn
+- Mục tiêu: Tự động hóa quy trình quản lý khách sạn
+- Phạm vi: Quản lý phòng, khách hàng, đặt phòng, thanh toán
+
+### Slide 2: Phân tích yêu cầu
+- Quản lý thông tin phòng
+- Quản lý thông tin khách hàng
+- Quản lý đặt phòng
+- Quản lý thanh toán
+- Báo cáo thống kê
+
+### Slide 3: Thiết kế hệ thống
+- Kiến trúc hệ thống
+- Cơ sở dữ liệu
+- Giao diện người dùng
+- Các module chính
+
+### Slide 4: Các chức năng chính
+- Đăng nhập/Đăng xuất
+- Quản lý phòng
+- Quản lý khách hàng
+- Đặt phòng
+- Thanh toán
+- Báo cáo
+
+### Slide 5: Demo hệ thống
+- Giao diện chính
+- Các chức năng cơ bản
+- Quy trình làm việc
+
+### Slide 6: Kết luận
+- Tổng kết
+- Hướng phát triển
+- Cảm ơn 

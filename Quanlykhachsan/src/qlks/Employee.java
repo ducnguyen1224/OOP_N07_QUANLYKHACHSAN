@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author HP
+ * @author DucNguyen
  */
 public class Employee extends javax.swing.JFrame {
     private int accountId;

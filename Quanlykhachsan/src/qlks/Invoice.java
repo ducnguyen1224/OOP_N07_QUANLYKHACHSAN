@@ -26,7 +26,7 @@ import java.text.DecimalFormat;
 
 /**
  *
- * @author I_m Fall
+ * @author NguyenHoang
  */
 public class Invoice extends javax.swing.JFrame {
     private int accountId;

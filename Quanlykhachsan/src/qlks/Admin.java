@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author HP
+ * @author DucNguyen
  */
 public class Admin extends javax.swing.JFrame {
     private int accountId;

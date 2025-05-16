@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author HP
+ * @author DucNguyen
  */
 public class Customer extends javax.swing.JFrame {
     private int accountId;
